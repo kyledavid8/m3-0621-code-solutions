@@ -11,7 +11,7 @@ const pokedex = [
 
 function PokeList(props) {
   const pokemon = props.pokedex;
-  const listPoke = pokemon.map((poke) => <li>{poke.name}</li>)
+  const listPoke = pokemon.map((poke) => <li key={poke.number}>{poke.name}</li>)
   return <ul>{listPoke}</ul>
 };
 
