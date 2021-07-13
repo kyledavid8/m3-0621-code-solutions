@@ -11,11 +11,9 @@ class AppDrawer extends React.Component {
 
   render() {
 
-    let display = "none";
     let barBorder = "none";
 
     if(this.state.drawer === "open") {
-      display = "block";
       barBorder = "2px solid black"
     }
 
