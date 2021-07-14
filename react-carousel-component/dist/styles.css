@@ -1,0 +1,35 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.image {
+  width: calc(100% / 2);
+}
+
+img {
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.right,
+.left {
+  width: calc(100% / 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dots > i {
+  margin-right: 10px;
+}
