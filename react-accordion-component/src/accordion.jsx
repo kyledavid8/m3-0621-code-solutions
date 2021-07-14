@@ -38,7 +38,7 @@ class Accordion extends React.Component {
     this.setState({openId: id})
   }
 
-  handleClose(event) {
+  handleClose() {
     this.setState({openId: null})
   }
 }
