@@ -47,7 +47,7 @@ class Carousel extends React.Component {
 
   handleClickLeft(props) {
     clearInterval(this.int)
-    setTimeout(this.componentDidMount(), 3000)
+    this.componentDidMount();
 
     if(this.state.image === 0) {
       this.setState({image: this.props.poke.length - 1});
@@ -59,7 +59,7 @@ class Carousel extends React.Component {
 
   handleClickRight(props) {
     clearInterval(this.int)
-    setTimeout(this.componentDidMount(), 3000)
+    this.componentDidMount();
 
     if(this.state.image === this.props.poke.length - 1) {
       this.setState({image: 0})
@@ -71,7 +71,7 @@ class Carousel extends React.Component {
 
   handleDotClick(id) {
     clearInterval(this.int)
-    setTimeout(this.componentDidMount(), 3000)
+    this.componentDidMount();
 
     this.setState({image: id});
   }
