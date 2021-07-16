@@ -10,10 +10,15 @@ class Carousel extends React.Component {
     this.handleClickRight = this.handleClickRight.bind(this);
     this.handleDotClick = this.handleDotClick.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.carouselInterval = this.carouselInterval.nind(this);
   }
 
   componentDidMount() {
-    this.int = setInterval(() => this.handleClickRight(), 3000)
+    this.int = setInterval(() => this.handleClickRight(), 3000);
+  }
+
+  carouselInterval() {
+    this.int = setInterval(() => this.handleClickRight(), 3000);
   }
 
   render(props) {
@@ -46,8 +51,8 @@ class Carousel extends React.Component {
   }
 
   handleClickLeft(props) {
-    clearInterval(this.int)
-    this.componentDidMount();
+    clearInterval(this.int);
+    this.carouselInterval();
 
     if(this.state.image === 0) {
       this.setState({image: this.props.poke.length - 1});
@@ -58,8 +63,8 @@ class Carousel extends React.Component {
   }
 
   handleClickRight(props) {
-    clearInterval(this.int)
-    this.componentDidMount();
+    clearInterval(this.int);
+    this.carouselInterval();
 
     if(this.state.image === this.props.poke.length - 1) {
       this.setState({image: 0})
@@ -70,8 +75,8 @@ class Carousel extends React.Component {
   }
 
   handleDotClick(id) {
-    clearInterval(this.int)
-    this.componentDidMount();
+    clearInterval(this.int);
+    this.carouselInterval();
 
     this.setState({image: id});
   }
