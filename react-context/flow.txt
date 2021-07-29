@@ -1,0 +1,17 @@
+sign-up:
+ when the user sign-ups their password is hashed, then the db is queried to POST the hashed password and username
+
+sign-in:
+  When the user signs in,  they put in their username and password, the code checks to see if their is a missing field.
+  After this, the db is queried to find the user with the username put in the field.
+  if the user exists, the user will get verified with the password they put in the field and the hashedpassword in the db.
+  if they password the user inputed is verified or (isMatched) then they'll recieve a token which gives access to the site.
+
+stay-in:
+  upon sing-in, the user is given their token which authorizes them.
+  This token is stored in local storage, so when the user refreshes componentDidMount is called since the page is refreshed and
+  render is called for the "first" time.
+  when CDM is called it checks if the token exists, if it does exist then user within state is kept to ur decoded token which says ur a valid user and can stay
+
+sign-out:
+  when the user clicks sign out, handlesignout is called which removes the token from localStorage and sets the state prop user to null.
